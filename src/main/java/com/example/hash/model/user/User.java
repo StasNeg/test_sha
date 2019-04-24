@@ -1,6 +1,6 @@
-package com.example.demo.model.user;
+package com.example.hash.model.user;
 
-import com.example.demo.model.AbstractBaseEntity;
+import com.example.hash.model.AbstractBaseEntity;
 import org.hibernate.annotations.BatchSize;
 import org.springframework.util.CollectionUtils;
 

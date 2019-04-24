@@ -1,7 +1,7 @@
-package com.example.demo.configuration;
+package com.example.hash.configuration;
 
-import com.example.demo.service.UserService;
-import com.example.demo.utils.PasswordUtil;
+import com.example.hash.service.UserService;
+import com.example.hash.utils.PasswordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,20 +28,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.csrf().disable().authorizeRequests().antMatchers("/static/**", "/webjars/**", "/css/**", "/js/**", "/register/**", "/i18n/**", "/test/**")
-                .permitAll()
-                .antMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                .antMatchers("/admin/**").hasRole("ADMIN").anyRequest().authenticated();
-//                .and()
-//                .formLogin()
-//                .loginPage("/")
-//                .usernameParameter("j_username")
-//                .passwordParameter("j_password")
-//                .permitAll()
-//                .and().exceptionHandling().accessDeniedPage("/")//accessDeniedHandler(customAccessDeniedHandler)
-//                .and()
-//                .logout().logoutUrl("/logout")
-//                .permitAll();
+        http.csrf().disable().authorizeRequests().antMatchers("/**","/h2-console/**", "/test/**")
+                .permitAll();
+//                .antMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+//                .antMatchers("/admin/**").hasRole("ADMIN").anyRequest().authenticated();
     }
 
     @Override

@@ -1,6 +1,6 @@
-package com.example.demo.utils;
+package com.example.hash.utils;
 
-import com.example.demo.model.user.User;
+import com.example.hash.model.user.User;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

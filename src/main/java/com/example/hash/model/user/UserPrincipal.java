@@ -1,4 +1,4 @@
-package com.example.demo.model.user;
+package com.example.hash.model.user;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

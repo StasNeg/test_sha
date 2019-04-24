@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.hash.service;
 
-import com.example.demo.model.user.User;
-import com.example.demo.model.user.UserPrincipal;
-import com.example.demo.repository.UserRepository;
+import com.example.hash.model.user.User;
+import com.example.hash.model.user.UserPrincipal;
+import com.example.hash.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

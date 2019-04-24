@@ -1,6 +1,6 @@
-package com.example.demo.model.dto;
+package com.example.hash.model.dto;
 
-import com.example.demo.model.user.User;
+import com.example.hash.model.user.User;
 
 public class UserDto {
     private String password;

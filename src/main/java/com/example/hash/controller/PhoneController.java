@@ -1,6 +1,6 @@
 package com.example.hash.controller;
 
-import com.example.hash.model.tele.Telephone;
+import com.example.hash.model.tel.Telephone;
 import com.example.hash.service.TelephoneService;
 import com.example.hash.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;

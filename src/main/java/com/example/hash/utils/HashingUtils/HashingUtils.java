@@ -1,6 +1,9 @@
 package com.example.hash.utils.HashingUtils;
 
+import com.example.hash.model.hash.HashType;
+import com.example.hash.service.HashTypeService;
 import com.google.common.hash.Hashing;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -9,11 +12,20 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class HashingUtils {
 
-    @Value("${hash.type}")
-    private String hashType;
+    private HashTypeService service;
 
-    public String getHashString(String originalString, String salt) {
-        switch (hashType) {
+    private HashType hashType;
+    @Autowired
+    public HashingUtils(HashTypeService service) {
+        this.service = service;
+    }
+
+
+    public String getHashString(String originalString) {
+        if(hashType == null)
+            hashType = service.findById(1);
+        String salt = hashType.getSalt();
+        switch (hashType.getHashType()) {
             case "1":
                 return getHash1(originalString + salt);
             case "2":

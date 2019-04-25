@@ -1,6 +1,6 @@
 package com.example.hash.repository;
 
-import com.example.hash.model.tele.Telephone;
+import com.example.hash.model.tel.Telephone;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

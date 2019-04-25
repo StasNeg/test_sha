@@ -1,6 +1,6 @@
 package com.example.hash.service;
 
-import com.example.hash.model.tele.Telephone;
+import com.example.hash.model.tel.Telephone;
 import com.example.hash.repository.TelephoneRepository;
 import com.example.hash.utils.HashingUtils.HashingUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class TelephoneService  {
     }
 
     public Telephone getHashByPhoneNumber(String phoneNumber){
-        return telephoneRepository.findFirstByHash(hashingUtils.getHashString(phoneNumber, "")).orElse(new Telephone());
+        return telephoneRepository.findFirstByHash(hashingUtils.getHashString(phoneNumber)).orElse(new Telephone());
     }
 
     public Telephone getTelephoneByHash(String hash){

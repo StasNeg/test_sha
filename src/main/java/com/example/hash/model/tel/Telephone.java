@@ -1,4 +1,4 @@
-package com.example.hash.model.tele;
+package com.example.hash.model.tel;
 
 import com.example.hash.model.AbstractBaseEntity;
 

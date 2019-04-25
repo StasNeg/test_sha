@@ -1,0 +1,1 @@
+java -Dspring.config.location=C:\Users\Stanislav_Nizhnyi\Documents\test_sha\test\target\application.properties -jar C:\Users\Stanislav_Nizhnyi\Documents\test_sha\test\target\hash_test-0.0.1-SNAPSHOT.jar 

@@ -6,6 +6,8 @@ For launch:
         set credential to your MySqlServer:
         spring.datasource.username=YOUR_USERNAME
         spring.datasource.password=YOUR_PASSWORD
+
+
     2. For auto create records:
         You can fill records in to schema if your properties contains:
             spring.jpa.hibernate.ddl-auto=create
@@ -16,12 +18,15 @@ For launch:
             hash.type=2                                                                 ---- type of hash (only 1, 2, 3)
             hash.salt=salt                                                              ---- salt: your text with salt
         that data will be used only when you create your records.
+
     3. Run mvn clean install
+
+
     4. If you want change properties add your properties.files and change paths in test.bat ant run it.
 
     After successful run you could see : "end add to sql"
 
-    Working with Application:
+Working with Application:
     Application answers for two requests:
     1. YOUR_HOST/test/telephone/number/{number}
         curl -X GET \
@@ -38,3 +43,5 @@ For launch:
     What conditions didn't realise:
     1. Time of response - is very long - in Table didn't use indexes (for rapid time to init DataBase)
     2. I can't tackle with collisions
+
+    Source code you can find here: https://github.com/StasNeg/test_sha/tree/dev
